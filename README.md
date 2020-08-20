@@ -1,5 +1,8 @@
 # Exploratory Data Analysis
 
+### TODO
+* add some ways to interact with excel
+
 First do:
 ```bash
 docker build --tag eda:0.0.1 .
