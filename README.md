@@ -9,7 +9,7 @@ The simples way to use this image on your windows machine is to run:
 docker run -t -p 9999:9999 --name eda_jupyter -v %cd%:/app ltpdigital/eda jupyter notebook --port 9999 --ip=0.0.0.0 --allow-root
 ```
 
-This will open a jupyter notebook server in the terminal's current directory, you can access it via: http://localhost:9999
+This will open a jupyter notebook server in the terminal's current directory, you can access it via the on-screen provided link that starts with: `http://127.0.0.1:9999/?token=`
 
 If you just have a 'main.py' script you want to run you can do:
 
