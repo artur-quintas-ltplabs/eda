@@ -1,15 +1,14 @@
 # Exploratory Data Analysis
 
-Requirements: Docker
+**Requirements**: Docker
 
-
-The simples way to use this image on your windows machine is to run:
+The simplest way to use this image on your windows machine is to run:
 
 ```bash
-docker run -t -p 9999:9999 --name eda_jupyter -v %cd%:/app ltpdigital/eda jupyter notebook --port 9999 --ip=0.0.0.0 --allow-root
+docker run -t -p 8888:8888 --name eda_notebook -v %cd%:/app ltpdigital/eda:jupyter
 ```
 
-This will open a jupyter notebook server in the terminal's current directory, you can access it via the on-screen provided link that starts with: `http://127.0.0.1:9999/?token=`
+This will open a jupyter notebook server in the terminal's current directory, you can access it via the on-screen provided link that starts with: `http://127.0.0.1:8888/?token=`
 
 If you just have a 'main.py' script you want to run you can do:
 
@@ -26,9 +25,6 @@ Start by getting the project via git clone:
 ```bash
 git clone git@github.com:artur-quintas-ltplabs/eda.git
 ```
-
-### TODO
-* add some ways to interact with excel
 
 To build the image from the project folder do:
 ```bash
@@ -49,3 +45,7 @@ Remove container:
 ```bash
 docker stop eda_jupyter && docker rm eda_jupyter
 ```
+
+### TODO
+* add some ways to interact with excel
+* add support for more dbs
